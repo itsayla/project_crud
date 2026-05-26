@@ -23,7 +23,7 @@ if (isset($_POST['edit'])) {
         $category_name = htmlspecialchars($_POST['category_name']);
         $cek = mysqli_query($koneksi, "SELECT category_name FROM categories WHERE category_name='$category_name'");
         if (mysqli_num_row($cek) > 0) {
-            header("location:?page=create-category&edit=" . $_GET['edit'] . )
+            header("location:?page=create-category&edit=" . $_GET['edit']);
         }
     }
 
